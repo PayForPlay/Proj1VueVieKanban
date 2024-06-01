@@ -1,0 +1,30 @@
+/* @import "primeicons/primeicons.css"; */
+@import 'primevue/resources/themes/lara-dark-teal/theme.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  padding:0;
+  margin:0;
+}
+
+.p-inputtext {
+  @apply: bg-white dark:bg-dark-grey 
+}
+
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+ 
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.349);
+}
