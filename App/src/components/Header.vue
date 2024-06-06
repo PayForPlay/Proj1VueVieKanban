@@ -1,5 +1,5 @@
 <template>
-  <header id="Header" class="bg-white dark:bg-dark-grey top-0 left-0 w-full flex items-center sm:pr-4">
+  <header class="bg-white dark:bg-dark-grey top-0 left-0 w-full flex items-center sm:pr-4">
 
     <div class="hidden items-center sm:flex pl-6 h-20 border-r border-r-lines-light dark:border-r-lines-dark md:h-24"
       :class="managerStore.sidebar ? ['min-w-[256px]', 'lg:min-w-[300px]'] : ['min-w-[200px]']">

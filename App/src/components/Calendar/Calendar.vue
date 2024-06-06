@@ -59,8 +59,6 @@
             </div>
         </div>
     </div>
-    <EventView v-if="managerStore.eventView" />
-    <EventForm v-if="managerStore.eventForm" />
 </template>
 
 <script setup>
@@ -75,8 +73,6 @@ import EventCard from "./EventCard.vue";
 import iconAdd from "./icons/iconAdd.vue";
 import { useManagerStore } from "../../stores/manager";
 import { useEventsStore } from "../../stores/events";
-import EventForm from './EventForm.vue';
-import EventView from './EventView.vue'
 
 const eventStore = useEventsStore()
 const managerStore = useManagerStore()

@@ -1,5 +1,5 @@
 <template>
-  <div id="SideBar" data-dragscroll class="z-10 transition-all fixed" :class="managerStore.sidebar ? ['translate-x-[0]'] : ['translate-x-[-100%]']
+  <div data-dragscroll class="z-10 transition-all fixed" :class="managerStore.sidebar ? ['translate-x-[0]'] : ['translate-x-[-100%]']
     ">
     <div
       class="bg-white dark:bg-dark-grey min-h-[calc(100vh-80px)] w-64 lg:w-[300px] pb-10 hidden sm:flex sm:flex-col border-r border-r-lines-light dark:border-r-lines-dark">

@@ -1,7 +1,6 @@
 <!-- App.vue -->
 <template >
-  <div>
-    <HeaderVue />
+  <HeaderVue />
   <main>
     <Toast />
     <div class="flex w-full">
@@ -18,18 +17,34 @@
   </main>
   <bgOverlay data-no-dragscroll />
   <div class="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] z-10 max-w-xs w-11/12 sm:max-w-md">
+    <TaskView v-if="managerStore.taskView" />
+    <TaskForm v-if="managerStore.taskForm.visible" />
+    <MailView v-if="managerStore.mailView" />
+    <MailForm v-if="managerStore.mailForm" />
+    <EventView v-if="managerStore.eventView" />
+    <EventForm v-if="managerStore.eventForm" />
+    <Delete v-if="managerStore.delete.visible" />
+    <BoardForm v-if="managerStore.boardForm.visible" />
     <SidebarMobile v-if="managerStore.sidebarMobile" />
-  </div>
   </div>
 </template >
   
 <script setup>
 import HeaderVue from './components/Header.vue';
 import bgOverlay from './components/Kanban/bgOverlay.vue';
+import TaskView from './components/Kanban/manager/TaskView.vue'
+import TaskForm from './components/Kanban/manager/TaskForm.vue';
+import Delete from './components/Kanban/form/Delete.vue';
+import BoardForm from './components/Kanban/manager/BoardForm.vue';
+import MailView from './components/Mail/manager/MailView.vue';
+import MailForm from './components/Mail/manager/MailForm.vue';
 import SideBar from './components/Sidebar.vue';
 import SidebarMobile from './components/Kanban/manager/SidebarMobile.vue';
 import ShowSidebar from './components/Kanban/manager/sidebar/ShowSidebar.vue';
+import EventForm from './components/Calendar/EventForm.vue';
+import EventView from './components/Calendar/EventView.vue'
 import { useToast } from "primevue/usetoast";
+
 import { onMounted, watch } from 'vue';
 import { useManagerStore } from './stores/manager';
 import { useAuthStore } from './stores/AuthStore'

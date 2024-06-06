@@ -1,5 +1,5 @@
 <template>
-  <div id="MailView" class="absolute bg-white dark:bg-dark-grey rounded-md p-1 shadow-xl z-20 top-1/3 left-1/3">
+  <div class="bg-white dark:bg-dark-grey rounded-md p-1 shadow-xl">
     <div class="p-5 pr-3 flex flex-col gap-4 max-h-[90vh] overflow-y-auto ">
       <div class="absolute top-2 right-2">
         <Dropdown @onClickDelete="deleteMail()" @onClickRestore="restoreMail()" />
